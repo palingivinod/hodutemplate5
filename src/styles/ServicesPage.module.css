@@ -1,0 +1,111 @@
+.servicesPageSection {
+  background-color: var(--bg-warm-white);
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.serviceItem {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 4rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.serviceItem:nth-child(even) {
+  background-color: rgba(231, 236, 231, 0.25);
+  margin-left: calc(-1 * var(--section-padding-x));
+  margin-right: calc(-1 * var(--section-padding-x));
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+}
+
+.leftHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.index {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-terracotta);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.15;
+  color: var(--brand-deep-forest);
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lead {
+  font-size: 1.1875rem;
+  line-height: 1.75;
+  color: var(--text-deep-charcoal);
+  font-weight: 500;
+}
+
+.deliverablesTitle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-slate-grey);
+  margin-bottom: 0.75rem;
+}
+
+.deliverablesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  list-style: none;
+}
+
+.deliverableItem {
+  font-size: 0.9375rem;
+  color: var(--text-slate-grey);
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  line-height: 1.6;
+}
+
+.bullet {
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent-terracotta);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 960px) {
+  .serviceItem {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .deliverablesGrid {
+    grid-template-columns: 1fr;
+  }
+}

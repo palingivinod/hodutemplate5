@@ -1,0 +1,149 @@
+.aboutSection {
+  background-color: var(--bg-warm-white);
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.headingLarge {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 3.8vw, 3.25rem);
+  line-height: 1.15;
+  color: var(--text-deep-charcoal);
+  letter-spacing: -0.015em;
+  margin-bottom: 1.75rem;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.textLead {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: var(--brand-deep-forest);
+  font-weight: 500;
+}
+
+.textPara {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--text-slate-grey);
+}
+
+.aboutHeroImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: var(--bg-soft-sage);
+  margin-bottom: 5.5rem;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform var(--transition-editorial);
+}
+
+.aboutHeroImage:hover .image {
+  transform: scale(1.02);
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.9rem 1.25rem;
+  background: linear-gradient(to top, rgba(32, 48, 44, 0.75), transparent);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg-warm-white);
+  font-weight: 500;
+}
+
+.sageBand {
+  background-color: var(--bg-soft-sage);
+  padding: 5rem 0;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.pillarCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillarNum {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-terracotta);
+  margin-bottom: 1.25rem;
+}
+
+.pillarTitle {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  color: var(--brand-deep-forest);
+  margin-bottom: 1rem;
+}
+
+.pillarDesc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-slate-grey);
+}
+
+.materialMoment {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--bg-soft-sage);
+  border-radius: 2px;
+}
+
+.materialContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 960px) {
+  .twoCol,
+  .materialMoment {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

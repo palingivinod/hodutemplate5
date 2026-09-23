@@ -1,0 +1,117 @@
+.servicesSection {
+  background-color: var(--bg-soft-sage);
+}
+
+.headerBlock {
+  max-width: 760px;
+  margin-bottom: 4.5rem;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--text-deep-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.subtext {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-slate-grey);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4.5rem;
+}
+
+.serviceCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceRow {
+  display: block;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+  border-bottom: 1px solid rgba(37, 39, 37, 0.12);
+  transition: all var(--transition-smooth);
+  text-decoration: none;
+  position: relative;
+}
+
+.serviceRow:first-child {
+  border-top: 1px solid rgba(37, 39, 37, 0.12);
+}
+
+.rowHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.index {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--brand-deep-forest);
+  margin-right: 1.25rem;
+  transition: color var(--transition-fast);
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: baseline;
+  flex: 1;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  color: var(--text-deep-charcoal);
+  transition: transform var(--transition-smooth), color var(--transition-fast);
+}
+
+.arrow {
+  color: var(--brand-deep-forest);
+  transition: transform var(--transition-smooth), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--text-slate-grey);
+  padding-left: 2.35rem;
+  max-width: 480px;
+}
+
+/* Hover States */
+.serviceRow:hover .title {
+  transform: translateX(6px);
+  color: var(--accent-terracotta);
+}
+
+.serviceRow:hover .index {
+  color: var(--accent-terracotta);
+}
+
+.serviceRow:hover .arrow {
+  transform: translateX(6px);
+  color: var(--accent-terracotta);
+}
+
+@media (max-width: 960px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .serviceCol:last-child .serviceRow:first-child {
+    border-top: none;
+  }
+}

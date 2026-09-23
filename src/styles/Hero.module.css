@@ -1,0 +1,128 @@
+.hero {
+  background-color: var(--bg-warm-white);
+  min-height: calc(90vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: flex-end;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-terracotta);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 6.2vw, 5.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--text-deep-charcoal);
+  margin-bottom: 2.5rem;
+}
+
+.headlineLine {
+  display: block;
+  overflow: hidden;
+}
+
+.headlineSpan {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.accentLife {
+  color: var(--brand-deep-forest);
+  position: relative;
+}
+
+.accentLifeHighlight {
+  color: var(--accent-terracotta);
+}
+
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.supportingText {
+  font-size: clamp(1.0625rem, 1.25vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--text-slate-grey);
+  margin-bottom: 2.75rem;
+  max-width: 480px;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.anchorDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+}
+
+.terracottaLine {
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-terracotta);
+}
+
+.pipelineLabel {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-slate-grey);
+  opacity: 0;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .supportingText {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,237 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--bg-warm-white);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: height var(--transition-smooth), background-color var(--transition-smooth);
+}
+
+.headerScrolled {
+  height: var(--header-height-scrolled);
+  border-bottom-color: rgba(37, 39, 37, 0.12);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  text-decoration: none;
+}
+
+.brandLogo {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--brand-deep-forest);
+  line-height: 1;
+}
+
+.brandSubtitle {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-slate-grey);
+  line-height: 1.2;
+  border-left: 1px solid rgba(37, 39, 37, 0.15);
+  padding-left: 1.15rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  list-style: none;
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-deep-charcoal);
+  letter-spacing: 0.02em;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--accent-terracotta);
+}
+
+.navLinkActive {
+  color: var(--brand-deep-forest);
+  font-weight: 600;
+}
+
+.navLinkActive::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-terracotta);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  background-color: var(--brand-deep-forest);
+  color: var(--bg-warm-white);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--brand-deep-forest);
+  border-radius: 2px;
+  transition: all var(--transition-smooth);
+}
+
+.ctaBtn:hover {
+  background-color: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+  color: #FFFFFF;
+}
+
+.mobileToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--brand-deep-forest);
+}
+
+/* Mobile Menu Overlay */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--brand-deep-forest);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem 3rem 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transform: translateY(-8px);
+}
+
+.mobileMenuOpen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobileMenuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(201, 212, 205, 0.2);
+}
+
+.mobileBrandLogo {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--bg-warm-white);
+}
+
+.mobileCloseBtn {
+  background: none;
+  border: none;
+  color: var(--bg-warm-white);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobileNavLinks {
+  list-style: none;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.mobileNavLink {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--bg-warm-white);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+
+.mobileNavLink:hover {
+  color: var(--accent-dusty-sage);
+  transform: translateX(6px);
+}
+
+.mobileCtaWrapper {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201, 212, 205, 0.2);
+}
+
+.mobileCtaBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1.1rem 1.5rem;
+  background-color: var(--bg-warm-white);
+  color: var(--brand-deep-forest);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+}
+
+@media (max-width: 960px) {
+  .brandSubtitle {
+    display: none;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .ctaBtn {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+}

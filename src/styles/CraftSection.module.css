@@ -1,0 +1,84 @@
+.craftSection {
+  background-color: var(--bg-warm-white);
+  border-top: 1px solid var(--border-light);
+}
+
+.craftGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.imageCol {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-soft-sage);
+  border-radius: 2px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform var(--transition-editorial);
+}
+
+.imageCol:hover .image {
+  transform: scale(1.02);
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(to top, rgba(32, 48, 44, 0.7), transparent);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg-warm-white);
+  font-weight: 500;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--text-deep-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-slate-grey);
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+@media (max-width: 960px) {
+  .craftGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contentCol {
+    order: 2;
+  }
+
+  .imageCol {
+    order: 1;
+  }
+}

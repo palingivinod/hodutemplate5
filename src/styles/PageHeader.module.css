@@ -1,0 +1,29 @@
+.pageHeader {
+  background-color: var(--bg-warm-white);
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.inner {
+  max-width: 900px;
+}
+
+.eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 5vw, 4.25rem);
+  line-height: 1.08;
+  color: var(--text-deep-charcoal);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.015em;
+}
+
+.description {
+  font-size: clamp(1.125rem, 1.35vw, 1.35rem);
+  line-height: 1.75;
+  color: var(--text-slate-grey);
+}
