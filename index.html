@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HODU | Professional Villa Construction & Turnkey Home Builders</title>
   <meta name="description" content="HODU provides complete villa construction solutions from architectural planning and structural civil works to interiors and final handover across South India.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=contrast">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#" class="brand-logo" aria-label="HODU Villa Construction Home">
-        <span class="logo-main">HODU</span>
+        <img src="images/logo.png" alt="HODU Logo" class="header-logo-img">
         <span class="logo-tag">Villa Construction<br>&amp; Design</span>
       </a>
 
@@ -51,7 +51,24 @@
        HERO SECTION
        ========================================================================= -->
   <section id="home" class="hero-section">
-    <div class="container hero-grid">
+    <!-- Background Video -->
+    <div class="hero-video-bg">
+      <video
+        class="hero-bg-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="images/villa-exterior.jpg"
+      >
+        <source src="videos/hero_banner.mp4" type="video/mp4">
+        <source src="videos/hero_banner .mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
       <div class="hero-content">
         <span class="hero-label">VILLA CONSTRUCTION &amp; DESIGN</span>
         <h1 class="hero-title">
@@ -63,7 +80,7 @@
 
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">START YOUR PROJECT</a>
-          <a href="tel:+919849012345" class="btn btn-secondary">CALL US</a>
+          <a href="tel:+919849012345" class="btn btn-outline-white">CALL US</a>
         </div>
 
         <div class="hero-trust-bar">
@@ -81,16 +98,6 @@
           </div>
         </div>
       </div>
-
-      <div class="hero-image-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
-          alt="Modern residential villa built by HODU"
-          class="hero-image"
-          width="1000"
-          height="750"
-        >
-      </div>
     </div>
   </section>
 
@@ -101,7 +108,7 @@
     <div class="container about-grid">
       <div class="about-image-wrapper">
         <img
-          src="https://images.unsplash.com/photo-1541888946425-d0fbb18615f8?auto=format&fit=crop&w=1000&q=80"
+          src="images/about-engineers.jpg"
           alt="Civil engineer and construction supervisor reviewing villa plans"
           class="about-image"
           width="1000"
@@ -397,7 +404,7 @@
         <div class="project-card">
           <div class="project-image-wrap">
             <img
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+              src="images/villa-project-1.jpg"
               alt="Modern Family Villa built in Hyderabad"
               class="project-image"
               width="800"
@@ -417,7 +424,7 @@
         <div class="project-card">
           <div class="project-image-wrap">
             <img
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+              src="images/villa-exterior.jpg"
               alt="Contemporary Residence built in Vijayawada"
               class="project-image"
               width="800"
@@ -437,7 +444,7 @@
         <div class="project-card">
           <div class="project-image-wrap">
             <img
-              src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80"
+              src="images/villa-interior.jpg"
               alt="Premium Urban Villa built in Bengaluru"
               class="project-image"
               width="800"
@@ -457,7 +464,7 @@
         <div class="project-card">
           <div class="project-image-wrap">
             <img
-              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+              src="images/craft-detail.jpg"
               alt="Courtyard Residence built in Hyderabad"
               class="project-image"
               width="800"
@@ -692,7 +699,9 @@
     <div class="container footer-grid">
       <!-- Col 1 -->
       <div>
-        <div class="footer-logo-title">HODU</div>
+        <div class="footer-logo-title">
+          <img src="images/logo.png" alt="HODU Logo" class="footer-logo-img">
+        </div>
         <p class="footer-desc">
           Professional villa design and turnkey construction company. We build quality residential homes with dependable engineering, transparent planning, and dedicated supervision across South India.
         </p>
